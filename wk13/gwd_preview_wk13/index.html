@@ -143,20 +143,21 @@ body {
     <gwd-pagedeck class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <gwd-page id="banner-page" data-gwd-name="橫幅頁面" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="320px" data-gwd-height="50px">
         <div class="gwd-page-content banner">
-          <gwd-image id="bg01" source="bg01.jpg?1544509666740" scaling="stretch" class="gwd-image-1e4x"></gwd-image>
+          <gwd-image id="bg01" source="bg01.jpg?1544510089990" scaling="stretch" class="gwd-image-1e4x"></gwd-image>
           <gwd-taparea id="expand-button" class="expand-button"></gwd-taparea>
         </div>
       </gwd-page>
       <gwd-page id="expanded-page" expanded="" data-gwd-name="展開式頁面" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="480px" data-gwd-height="250px">
         <div class="gwd-page-content expanded">
-          <gwd-image id="bg02" source="bg02.jpg?1544509666740" scaling="stretch" class="gwd-image-qms0"></gwd-image>
+          <gwd-image id="bg02" source="bg02.jpg?1544510089990" scaling="stretch" class="gwd-image-qms0"></gwd-image>
           <gwd-taparea id="close-button" class="close-button" data-gwd-name="Hello"></gwd-taparea>
           <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-vysk"></gwd-taparea>
-          <gwd-video id="gwd-video_1" controls="" sources="video.mp4" class="gwd-video-1uc7" data-gwd-name="bang" autoplay=""></gwd-video>
+          <gwd-video id="gwd-video_1" sources="video.mp4" class="gwd-video-1uc7" data-gwd-name="bang" autoplay=""></gwd-video>
         </div>
       </gwd-page>
     </gwd-pagedeck>
     <gwd-exit metric="Hey" url="http://google.com"></gwd-exit>
+    <gwd-exit metric="Hey_1" url="http://google.com"></gwd-exit>
   </gwd-google-ad>
   <script type="text/javascript" gwd-events="registration">
     // Google Web Designer 中處理事件的支援程式碼
@@ -166,12 +167,14 @@ body {
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.auto_Close_buttonAction, false);
+      gwd.actions.events.addHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.auto_Close_buttonAction, false);
+      gwd.actions.events.removeHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -192,6 +195,10 @@ body {
     gwd.auto_Close_buttonAction = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdGoogleAd.exit('gwd-ad', 'Hey', 'http://google.com', true, true, 'banner-page');
+    };
+    gwd.auto_Gwd_taparea_1Action = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdGoogleAd.exit('gwd-ad', 'Hey_1', 'http://google.com', true, true, 'banner-page');
     };
   </script>
   <script type="text/javascript" id="gwd-init-code">
@@ -237,4 +244,5 @@ body {
 Enabler.setExpandingPixelOffsets(0,0,480,250,false,false);
 studio.video.Reporter.attach("gwd-video_1", dummyVideoElem, true);
 Enabler.exit("Hey", "http://google.com");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"GoogleAd","format":"","template":"Expandable 3.0.0","politeload":false,"fullscreen":false,"counters":[{"sourceType":"gwd-video","source":"gwd-video_1","metric":"gwd-video_1","isAutoplay":true}],"timers":[],"exits":[{"exitId":"Hey","url":"http://google.com"}],"creativeProperties":{"minWidth":320,"minHeight":50,"maxWidth":480,"maxHeight":250},"components":["gwd-google-ad","gwd-image","gwd-page","gwd-pagedeck","gwd-taparea","gwd-video"],"responsive":false}</script></body></html>
+Enabler.exit("Hey_1", "http://google.com");
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"GoogleAd","format":"","template":"Expandable 3.0.0","politeload":false,"fullscreen":false,"counters":[{"sourceType":"gwd-video","source":"gwd-video_1","metric":"gwd-video_1","isAutoplay":true}],"timers":[],"exits":[{"exitId":"Hey","url":"http://google.com"},{"exitId":"Hey_1","url":"http://google.com"}],"creativeProperties":{"minWidth":320,"minHeight":50,"maxWidth":480,"maxHeight":250},"components":["gwd-google-ad","gwd-image","gwd-page","gwd-pagedeck","gwd-taparea","gwd-video"],"responsive":false}</script></body></html>
