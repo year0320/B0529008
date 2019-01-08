@@ -505,16 +505,34 @@ body {
       // GWD Predefined Function
       gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 2, 'counter');
     };
+    gwd.auto_Page1Event_11 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 2, 'counter');
+    };
+    gwd.auto_Page1Event_12 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 3, 'counter');
+    };
+    gwd.auto_Page1Event_13 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 3, 'counter');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Google Web Designer 中處理事件的支援程式碼
      // 這個指令碼區塊是自動產生的，請勿編輯！
     gwd.actions.events.registerEventHandlers = function(event) {
       gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_11, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_12, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_13, false);
       gwd.actions.timeline.captureAnimationEnd(document.body);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_11, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_12, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_13, false);
       gwd.actions.timeline.releaseAnimationEnd(document.body);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
@@ -528,9 +546,9 @@ body {
     <gwd-pagedeck class="gwd-page-container" id="pagedeck">
       <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="512px" data-gwd-height="250px">
         <div class="gwd-page-content gwd-page-size">
-          <gwd-image id="back" source="unnamed.jpg?1546930034745" scaling="stretch" class="gwd-image-13z9 gwd-gen-187ogwdanimation"></gwd-image>
-          <gwd-image id="down" source="bk.jpg?1546930034745" scaling="stretch" class="gwd-image-yi5h gwd-gen-1y2xgwdanimation"></gwd-image>
-          <gwd-image id="up" source="bk.jpg?1546930034745" scaling="stretch" class="gwd-image-c2p3 gwd-gen-1342gwdanimation"></gwd-image>
+          <gwd-image id="back" source="unnamed.jpg?1546930430334" scaling="stretch" class="gwd-image-13z9 gwd-gen-187ogwdanimation"></gwd-image>
+          <gwd-image id="down" source="bk.jpg?1546930430334" scaling="stretch" class="gwd-image-yi5h gwd-gen-1y2xgwdanimation"></gwd-image>
+          <gwd-image id="up" source="bk.jpg?1546930430334" scaling="stretch" class="gwd-image-c2p3 gwd-gen-1342gwdanimation"></gwd-image>
           <div class="gwd-animation-event event-1-animation" data-event-name="event-1" data-event-time="4000"></div>
         </div>
       </gwd-page>

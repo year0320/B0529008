@@ -147,16 +147,34 @@
       // GWD Predefined Function
       gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 2, 'counter');
     };
+    gwd.auto_Page1Event_11 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 2, 'counter');
+    };
+    gwd.auto_Page1Event_12 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 3, 'counter');
+    };
+    gwd.auto_Page1Event_13 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.timeline.gotoAndPlayNTimes('page1', 'start', 3, 'counter');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Google Web Designer 中處理事件的支援程式碼
      // 這個指令碼區塊是自動產生的，請勿編輯！
     gwd.actions.events.registerEventHandlers = function(event) {
       gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_11, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_12, false);
+      gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_13, false);
       gwd.actions.timeline.captureAnimationEnd(document.body);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_11, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_12, false);
+      gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_13, false);
       gwd.actions.timeline.releaseAnimationEnd(document.body);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
